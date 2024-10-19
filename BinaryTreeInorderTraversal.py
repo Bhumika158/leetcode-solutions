@@ -32,7 +32,7 @@ class Solution(object):
             while cur:
                 stack.append(cur)
                 cur=cur.left
-            stack.pop()
+            cur=stack.pop()
             res.append(cur.val)
             cur=cur.right
         return res
