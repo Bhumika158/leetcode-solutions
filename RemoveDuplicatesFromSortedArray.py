@@ -18,4 +18,4 @@ class Solution(object):
 
 
 sol=Solution()
-print(sol.removeDuplicates([1,1,2,3,5]))
+print(sol.removeDuplicates([3,2,2,3]))
