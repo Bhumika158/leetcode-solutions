@@ -24,4 +24,4 @@ class Solution(object):
 
 
 sol=Solution()
-print(sol.reorderSpaces(" practice   makes   perfect"))
+print(sol.reorderSpaces(" practice   makes    perfect"))
