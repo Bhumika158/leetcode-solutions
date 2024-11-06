@@ -48,5 +48,6 @@ class Solution(object):
         return sum
 
 
+
 sol=Solution()
 print("ans",sol.countHillValley([8,2,5,7,7,2,10,3,6,2]))
