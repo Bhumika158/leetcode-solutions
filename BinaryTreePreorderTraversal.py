@@ -36,7 +36,6 @@ class Solution(object):
             return []
         res = []
         stack = [root]
-        cur = root
         while stack:
             cur = stack.pop()
             res.append(cur.val)
