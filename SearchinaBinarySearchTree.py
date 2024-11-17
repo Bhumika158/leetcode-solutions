@@ -16,12 +16,33 @@ class Solution(object):
         :type val: int
         :rtype: Optional[TreeNode]
         """
-        ## O(h) time complexity where h is height of tree and O(1) space complexity
-        while root is not None:
-            if root.val == val:
-                return root
-            elif val < root.val:
-                root = root.left
+
+        ##Iterative Approach: Time: O(h), Space: O(1)
+        # while root:
+        #     if root.val==val:
+        #         return root
+        #     elif val<root.val:
+        #         root=root.left
+        #     else:
+        #         root=root.right
+        # return None
+
+        ## Recursive Approach: Time:O(h), Space: O(h)
+        # if not root or root.val==val:
+        #     return root
+        # if val<root.val:
+        #     return self.searchBST(root.left,val)
+        # else:
+        #     return self.searchBST(root.right,val)
+
+        ##Binary Search Emulation - Recursive Approach: Time:O(h), Space: O(h)
+        def BinarySearch(node,low,high):
+            if not node or low > high:
+                return None
+            if node.val == val:
+                return node
+            elif node.val<val:
+                return BinarySearch(node.right, node.val + 1, high)
             else:
-                root = root.right
-        return None
+                return BinarySearch(node.left, low , node.val - 1)
+        return BinarySearch(root, float('-inf'), float('inf'))
