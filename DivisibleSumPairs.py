@@ -27,11 +27,6 @@ def divisibleSumPairs(n, k, ar):
     #             count+=1
     # return count
 
-    ## Frequency Count: Time:O(n+k), Space: O(k)
-    freq = [0] * k
-    for num in ar:
-        remainder = num % k
-        freq[remainder] += 1
-    print(freq)
+
 
 print(divisibleSumPairs(6,5,[1,2,3,4,5,6]))
