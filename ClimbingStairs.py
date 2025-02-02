@@ -25,4 +25,4 @@ class Solution(object):
 
 
 sol=Solution()
-print(sol.climbStairs(3))
+print(sol.climbStairs(10))
