@@ -1,6 +1,5 @@
 def count_substring(string, sub_string):
     l,r,c= 0,len(sub_string),0
-    print(l,r,c)
     while r <= len(string):
         if string[l:r] == sub_string:
             c+=1
